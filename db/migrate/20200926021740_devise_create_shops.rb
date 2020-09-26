@@ -4,8 +4,11 @@ class DeviseCreateShops < ActiveRecord::Migration[5.2]
   def change
     create_table :shops do |t|
       ## Database authenticatable
+      t.string :shop, null: false, unique: true
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
+      t.string :address,null: false
+      t.string :text
 
       ## Recoverable
       t.string   :reset_password_token
