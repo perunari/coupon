@@ -10,9 +10,9 @@
 |url|string||
 
 ### Association
-- has_many :coupon
+- has_many :salecoupon
 
-## couponsテーブル
+## salecouponsテーブル
 |Column|Type|Option|
 |------|----|------|
 |shop_id|integer||
