@@ -1,24 +1,25 @@
-# README
+## DB設計
+## shopテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Option|
+|------|----|------|
+|shop|string|null: false, unique: true|
+|email|string|null: false, unique: true|
+|password|string|null: false|
+|address|string|null: false|
+|url|string||
 
-Things you may want to cover:
+### Association
+- has_many :coupon
 
-* Ruby version
+## couponテーブル
+|Column|Type|Option|
+|------|----|------|
+|shop_id|integer||
+|saleprice|string|null: false|
+|start|datetime|null: false|
+|end|datetime|null: false|
+|body|text||
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :shop
