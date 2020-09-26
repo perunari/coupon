@@ -1,5 +1,5 @@
 ## DB設計
-## shopテーブル
+## shopsテーブル
 
 |Column|Type|Option|
 |------|----|------|
@@ -12,7 +12,7 @@
 ### Association
 - has_many :coupon
 
-## couponテーブル
+## couponsテーブル
 |Column|Type|Option|
 |------|----|------|
 |shop_id|integer||
