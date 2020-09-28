@@ -1,43 +1,51 @@
-<div class="content">
-  <p class="shopname">
-    【ここに店名を表示させる】
-  </p>
-</div>
+<div class="wrap"> 
+  <div class="main">
+    <div class="content">
+      <p class="shopname">
+        【ここに店名を表示させる】
+      </p>
+    </div>
 
-<div class="content">
-  <p class= "aboutprice">
-    割引価格
-  </p>
-  <input autocomplete="on" placeholder="例)1000" class="saleprice" type="text">
-  <select id="offunit">
-    <option value>--</option>
-    <option value="円">円 OFF</option>
-    <option value="％">％ OFF</option>
-  </select>
-</div>
+    <div class="content">
+      <div class="field">
+        <label class= "title">割引価格</label>
+        <span class="required">必須</span>
+      </div>
+      <input autocomplete="on" placeholder="例)1000" class="saleprice" type="text">
+      <select id="offunit">
+        <option value>--</option>
+        <option value="円">円 OFF</option>
+        <option value="％">％ OFF</option>
+      </select>
+    </div>
 
-<div class="content">
-  <p class="starttime">
-    セール開始日時
-  </p>
-  <input type="datetime-local" name="smp01" autocomplete="off">
-</div>
+    <div class="content">
+      <div class="field">
+        <label class= "title">クーポン利用開始日時</label>
+        <span class="required">必須</span>
+      </div>
+      <input type="datetime-local" name="smp01" autocomplete="off">
+    </div>
 
-<div class="content">
-  <p class="endtime">
-    セール終了日時
-  </p>
-  <input type="datetime-local" name="smp01" autocomplete="off">
-</div>
+    <div class="content">
+      <div class="field">
+        <label class= "title">クーポン期限日時</label>
+        <span class="required">必須</span>
+      </div>
+      <input type="datetime-local" name="smp01" autocomplete="off">
+    </div>
 
-<div class="content">
-  <p class="message">
-    クーポン詳細（クーポンの対象、クーポンコード等）
-  </p>
-  <textarea placeholder="クーポンの対象、クーポンコード等" rows="10" cols="60">
-  </textarea>
-</div>
+    <div class="content">
+      <div class="field">
+        <label class= "title">クーポン詳細(クーポン対象、クーポンコード等)</label>
+        <span class="required">必須</span>
+      </div>
+      <textarea placeholder="クーポンの対象、クーポンコード等" rows="10" cols="60">
+      </textarea>
+    </div>
 
-<div class="couponbtn">
-  <input type="submit" name="commit" value="クーポン発行">
+    <div class="couponbtn">
+      <input type="submit" name="commit" value="クーポン発行">
+    </div>
+  </div>
 </div>

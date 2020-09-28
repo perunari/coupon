@@ -1,3 +1,30 @@
-// Place all the styles related to the salecoupons controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrap{
+  background-color: #F5F5F5;
+}
+
+.main{
+  background-color: white;
+  width: 443px;
+  margin: 0 auto;
+}
+
+.content{
+  padding-top :30px;
+}
+
+.required{
+  font-size :14px;
+  background-color: red;
+  font-weight: 800;
+  color: #FFFFFF;
+  border-style: none;
+  border-radius: 2px;
+  padding: 2px 4px;
+  margin-left: 10px;
+}
+
+.couponbtn{
+  width :100px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
