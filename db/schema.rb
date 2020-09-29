@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2020_09_26_035717) do
 
   create_table "salecoupons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "shop_id"
-    t.integer "saleprice", null: false
     t.datetime "start", null: false
     t.datetime "end", null: false
     t.text "body"

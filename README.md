@@ -16,7 +16,6 @@
 |Column|Type|Option|
 |------|----|------|
 |shop_id|integer||
-|saleprice|string|null: false|
 |start|datetime|null: false|
 |end|datetime|null: false|
 |body|text||
