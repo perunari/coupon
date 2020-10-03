@@ -22,7 +22,16 @@
         <%= f.label :"パスワード(確認用)" %><br />
         <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
-      <br>
+      <div class="field">
+        <%= f.label :"ショップ住所" %><br />
+        <%= f.text_field :address, autocomplete: "on",placeholder: "例) 東京都" %>
+      </div>
+      <div class="field">
+        <%= f.label :"ショップURL" %><br />
+        <%= f.text_field :text, autocomplete: "on",placeholder: "aaa@aaa.ne.jp" %>
+      </div>
+
+<br>
       <div class="actions">
         <%= f.submit "新規登録" %>
       </div>
