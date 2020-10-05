@@ -1,3 +1,19 @@
+  <body>
+    <header class="header">
+      <div class="header__title">
+        <%= link_to "クーポン投稿", new_salecoupon_path, class: "header__title--text" %>
+      </div>
+      <div class="header__right">
+        
+          <%= link_to "ログアウト", destroy_shop_session_path, method: :delete, class: "header__right--btn" %>
+      
+      </div>
+    </header>
+    <div class="contents">
+      <%= yield %>
+    </div>
+  </body>
+
 <% @salecoupons.each do |salecoupon| %>
 
   <div class="post">
@@ -13,4 +29,5 @@
         <%= salecoupon.created_at %>
     </div>
   </div>
+
 <% end %>
