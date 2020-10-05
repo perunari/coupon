@@ -1,0 +1,53 @@
+<div class="wrap"> 
+  <div class="main">
+    <div class ="log">
+      <%= link_to "ログイン", new_shop_session_path, class: "log--in" %>
+    </div>
+    <div class="shopname">
+        【ここに店名を表示させる】
+    </div>
+
+  <div class="container">
+    <%= form_for @salecoupon do |form| %>
+      <h3>
+        投稿する
+      </h3>
+      <%= form.datetime_field :start, placeholder: "Nickname" %>
+      <%= form.datetime_field :end, placeholder: "Image Url" %>
+      <%= form.text_area :body, placeholder: "text", rows: "10" %>
+      <%= form.submit "クーポン発行" %>
+    <% end %>
+  </div>
+
+
+
+    <%# <div class="content">
+      <div class="field">
+        <label class= "starttime">クーポン利用開始日時</label>
+        <span class="required">必須</span>
+      </div>
+      <input type="datetime-local" name="smp01" autocomplete="off">
+    </div>
+
+    <div class="content">
+      <div class="field">
+        <label class= "endtime">クーポン期限</label>
+        <span class="required">必須</span>
+      </div>
+      <input type="datetime-local" name="smp01" autocomplete="off">
+    </div>
+
+    <div class="content">
+      <div class="field">
+        <label class= "body">クーポン詳細(クーポン対象、クーポンコード等)</label>
+        <span class="required">必須</span>
+      </div>
+      <textarea placeholder="クーポンの対象、クーポンコード等" rows="10" cols="60">
+      </textarea>
+    </div>
+
+    <div class="couponbtn">
+      <input type="submit" name="commit" value="クーポン発行">
+    </div> %>
+  </div>
+</div>
