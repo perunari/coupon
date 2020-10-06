@@ -4,8 +4,8 @@
         <%= link_to "クーポン投稿", new_salecoupon_path, class: "header__title--text" %>
       </div>
       <div class="header__right">
-        
-          <%= link_to "ログアウト", destroy_shop_session_path, method: :delete, class: "header__right--btn" %>
+          <%= link_to "ログイン", new_shop_session_path, class: "header__top--btn" %>
+          <%= link_to "ログアウト", destroy_shop_session_path, method: :delete, class: "header__top--btn" %>
       
       </div>
     </header>
@@ -18,7 +18,7 @@
 
   <div class="post">
     <div class="post-shop">
-      <%= salecoupon.shop %>
+      <%# <%= salecoupon.shop.find(params[:id])%>
     </div>
 
     <div class="post-body">

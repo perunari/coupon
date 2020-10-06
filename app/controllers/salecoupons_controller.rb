@@ -5,6 +5,7 @@ class SalecouponsController < ApplicationController
 
   def new
     @salecoupon = Salecoupon.new
+    @shop = current_shop.shop
   end
 
   def create
@@ -13,7 +14,7 @@ class SalecouponsController < ApplicationController
 
   private
   def salecoupon_params
-    params.require(:salecoupon).permit(:start, :end, :body)
+    params.require(:salecoupon).permit(:start, :end, :body).merge(shop_id: current_shop.id)
   end
 
 end
