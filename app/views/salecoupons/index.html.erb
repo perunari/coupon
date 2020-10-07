@@ -1,40 +1,33 @@
-<div class="wrap"> 
-  <div class="main">
-    <div class ="log">
-      <%= link_to "ログイン", new_shop_session_path, class: "log--in" %>
-    </div>
-    <div class="shopname">
-        【ここに店名を表示させる】
-    </div>
-
-
-    <div class="content">
-      <div class="field">
-        <label class= "starttime">クーポン利用開始日時</label>
-        <span class="required">必須</span>
+  <body>
+    <header class="header">
+      <div class="header__title">
+        <%= link_to "クーポン投稿", new_salecoupon_path, class: "header__title--text" %>
       </div>
-      <input type="datetime-local" name="smp01" autocomplete="off">
-    </div>
-
-    <div class="content">
-      <div class="field">
-        <label class= "endtime">クーポン期限</label>
-        <span class="required">必須</span>
+      <div class="header__right">
+          <%= link_to "ログイン", new_shop_session_path, class: "header__top--btn" %>
+          <%= link_to "ログアウト", destroy_shop_session_path, method: :delete, class: "header__top--btn" %>
+      
       </div>
-      <input type="datetime-local" name="smp01" autocomplete="off">
+    </header>
+    <div class="contents">
+      <%= yield %>
+    </div>
+  </body>
+
+<% @salecoupons.each do |salecoupon| %>
+
+  <div class="post">
+    <div class="post-shop">
+      <%# <%= salecoupon.shop.find(params[:id])%>
     </div>
 
-    <div class="content">
-      <div class="field">
-        <label class= "body">クーポン詳細(クーポン対象、クーポンコード等)</label>
-        <span class="required">必須</span>
-      </div>
-      <textarea placeholder="クーポンの対象、クーポンコード等" rows="10" cols="60">
-      </textarea>
+    <div class="post-body">
+      <%= salecoupon.body %>
     </div>
 
-    <div class="couponbtn">
-      <input type="submit" name="commit" value="クーポン発行">
+    <div class="post-created">
+        <%= salecoupon.created_at %>
     </div>
   </div>
-</div>
+
+<% end %>

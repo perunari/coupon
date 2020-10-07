@@ -6,7 +6,7 @@ class Shops::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   def new
-    @shop = Shop.new
+    @shop = Shop.new(sign_up_params)
   end
 
   # POST /resource
@@ -61,7 +61,7 @@ class Shops::RegistrationsController < Devise::RegistrationsController
   # end
   protected
   
-  def shop_params
+  def address_params
     params.require(:shop).permit(:shop, :email, :address, :text)
   end
 end
