@@ -5,7 +5,7 @@ class SalecouponsController < ApplicationController
 
   def new
     @salecoupon = Salecoupon.new
-    @shop = current_shop.shop
+    # @shop = current_shop.shop
   end
 
   def create
