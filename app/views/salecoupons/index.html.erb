@@ -17,6 +17,18 @@
 <% @salecoupons.each do |salecoupon| %>
 
   <div class="post">
+
+      <div class="more">
+        <p>
+          <% if shop_signed_in? && current_shop.id == salecoupon.shop_id %>
+            <%= link_to '編集', "/salecoupons/#{salecoupon.id}/edit", method: :get %>
+          </p>
+            <p>
+              <%= link_to '削除', "/salecoupons/#{salecoupon.id}", method: :delete %>
+            </p>
+          <% end %>
+      </div>
+
     <div class="post-shop">
     ショップ: 
       <%= salecoupon.shop.shop %>

@@ -1,0 +1,41 @@
+<div class="main">
+  <div class ="log">
+    <%= link_to "ログイン", new_shop_session_path, class: "log--in" %>
+  </div>
+  <div class="shopname">
+      <%= @shop %>
+  </div>
+
+  <div class="container">
+    <%= form_for @salecoupon do |form| %>
+
+    <div class="content">
+      <div class="field">
+        <label class= "starttime">クーポン利用開始日時</label>
+        <span class="required">必須</span>
+      </div>
+        <%= form.datetime_field :start %>
+    </div>
+
+  <div class="content">
+    <div class="field">
+      <label class= "endtime">クーポン期限</label>
+      <span class="required">必須</span>
+    </div>
+      <%= form.datetime_field :end %>
+  </div>
+
+  <div class="content">
+    <div class="field">
+      <label class= "body">クーポン詳細</label>
+      <span class="required">必須</span>
+    </div>
+      <%= form.text_area :body, placeholder: "クーポン対象、クーポンコード等", rows: "10" %>
+  </div>
+
+  <div class="couponbtn">
+    <%= form.submit "クーポン編集" %>
+  </div>
+  <% end %>
+</div>
+

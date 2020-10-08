@@ -12,9 +12,23 @@ class SalecouponsController < ApplicationController
     Salecoupon.create(salecoupon_params)
   end
 
+  def edit
+    @salecoupon = Salecoupon.find(params[:id])
+  end
+
+  def update
+    salecoupon = Salecoupon.find(params[:id])
+    salecoupon.update(salecoupon_params)
+  end
+
+  def destroy
+    salecoupon = Salecoupon.find(params[:id])
+    salecoupon.destroy
+  end
+
   private
   def salecoupon_params
-    params.require(:salecoupon).permit(:start, :end, :body).merge(shop_id: current_user.id)
+    params.require(:salecoupon).permit(:start, :end, :body).merge(shop_id: current_shop.id)
   end
 
 end
