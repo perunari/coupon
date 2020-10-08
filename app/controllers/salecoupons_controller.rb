@@ -14,7 +14,7 @@ class SalecouponsController < ApplicationController
 
   private
   def salecoupon_params
-    params.require(:salecoupon).permit(:start, :end, :body).merge(shop_id: current_shop.id)
+    params.require(:salecoupon).permit(:start, :end, :body).merge(shop_id: current_user.id)
   end
 
 end

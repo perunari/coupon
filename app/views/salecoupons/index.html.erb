@@ -18,15 +18,26 @@
 
   <div class="post">
     <div class="post-shop">
-      <%# <%= salecoupon.shop.find(params[:id])%>
+    ショップ: 
+      <%= salecoupon.shop.shop %>
     </div>
 
     <div class="post-body">
+    詳　　細:
       <%= salecoupon.body %>
     </div>
+    <div class="post-saletime">
+    使用期限: 
+      <%= salecoupon.start.to_s(:datetime_jp) %>
+      〜
+      <%= salecoupon.end.to_s(:datetime_jp) %>
+      まで
+    </div>
+
 
     <div class="post-created">
-        <%= salecoupon.created_at %>
+      投稿日時: 
+        <%= salecoupon.created_at.to_s(:datetime_jp) %>
     </div>
   </div>
 
