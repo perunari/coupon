@@ -9,6 +9,12 @@ class Shops::RegistrationsController < Devise::RegistrationsController
     @shop = Shop.new(sign_up_params)
   end
 
+  # def show
+  #   @shop = Shop.find(params[:id])
+  #   @salecoupons = @salecoupon.posts
+  # end
+
+
   # POST /resource
   # def create
   #   super
