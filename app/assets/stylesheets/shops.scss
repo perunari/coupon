@@ -64,7 +64,24 @@
 }
 
 .border{
-  padding-top :5vh;
+  margin :2vh 0;
   border-bottom: 3px solid;
 }
 
+.bottom-contents{
+  height:70vh;
+}
+.couponindex{
+  text-align: center;
+}
+
+.post-contents{
+  margin: 20px auto;
+  width: 50%;
+  height:11vh;
+  display: flex;
+  .posts{
+    background-color: white;
+    border: 1px solid;
+  }
+}
