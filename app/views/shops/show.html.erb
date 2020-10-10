@@ -1,0 +1,68 @@
+<div class="top-contents">
+  <div class="top-contents__shopName">
+    <div class="top-contents__shopName__defaultname">
+      SHOP
+    </div>
+    <div class="top-contents__shopName__name">
+      <%= @shop.shop %>
+    </div>
+  </div>
+  <div class="top-contents__shopAddress">
+    <div class="top-contents__shopAddress__defaultAddress">
+      ADDRESS
+    </div>
+    <div class="top-contents__shopAddress__address">
+      <%= @shop.address %>
+    </div>
+  </div>
+  <div class="top-contents__shopUrl">
+    <div class="top-contents__shopUrl__defaultUrl">
+      URL
+    </div>
+    <div class="top-contents__shopUrl__url">
+      <%= @shop.text %>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="bottom-contents">
+  <% @salecoupons.each do |salecoupon| %>
+  <%= @shop.shop %>のクーポン一覧
+
+  <div class="bottom-contents__post">
+     <p>
+      <% if shop_signed_in? && current_shop.id == salecoupon.shop_id %>
+        <%= link_to '編集', "/salecoupons/#{salecoupon.id}/edit", method: :get %>
+    </p>
+    <p>
+      <%= link_to '削除', "/salecoupons/#{salecoupon.id}", method: :delete %>
+    </p>
+      <% end %>
+    </div>
+    <div class="post-shop">
+      ショップ: 
+        <%= salecoupon.shop.shop %>
+    </div>
+
+    <div class="post-body">
+    詳　　細:
+      <%= salecoupon.body %>
+    </div>
+    <div class="post-saletime">
+    使用期限: 
+      <%= salecoupon.start.to_s(:datetime_jp) %>
+      〜
+      <%= salecoupon.end.to_s(:datetime_jp) %>
+      まで
+    </div>
+
+
+    <div class="post-created">
+      投稿日時: 
+        <%= salecoupon.created_at.to_s(:datetime_jp) %>
+    </div>
+  </div>
+  <% end %>
+</div>
