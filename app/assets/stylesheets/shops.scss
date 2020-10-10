@@ -1,3 +1,70 @@
-// Place all the styles related to the shops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-contents__shopName{
+  display: flex;
+  justify-content: center;
+  height :5vh;
+  line-height: 5vh;
+  margin-top:5vh;
+  .top-contents__shopName__defaultname{
+    border: 1px solid;
+    background-color: white;
+    width: 20%;
+    text-align: center;
+  }
+
+  .top-contents__shopName__name{
+    border: 1px solid;
+    background-color: white;
+    width: 50%;
+    
+  }
+}
+.top-contents__shopAddress{
+  display: flex;
+  justify-content: center;
+  height :5vh;
+  line-height: 5vh;
+
+  .top-contents__shopAddress__defaultAddress{
+    background-color: white;
+    border: 1px solid;
+    width:20%;
+    text-align: center;
+
+  }
+  .top-contents__shopAddress__address{
+    background-color: white;
+    border: 1px solid;
+    width: 50%;
+  }
+}
+.top-contents__shopUrl{
+  display: flex;
+  justify-content: center;
+  height :5vh;
+  line-height: 5vh;
+
+  .top-contents__shopUrl__defaultUrl{
+    background-color: white;
+    border: 1px solid;
+    width:20%;
+    text-align: center;
+
+
+  }
+  .top-contents__shopUrl__url{
+    background-color: white;
+    border: 1px solid;
+    width: 50%;
+  }
+}
+
+.shop{
+  padding:0 15px;
+}
+
+.border{
+  padding-top :5vh;
+  border-bottom: 3px solid;
+}
+
