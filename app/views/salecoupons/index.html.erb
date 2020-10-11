@@ -1,13 +1,15 @@
   <body>
     <header class="header">
       <div class="header__title">
-        <%= link_to "クーポン投稿", new_salecoupon_path, class: "header__title--text" %>
+        <%= link_to "クーポン発行", new_salecoupon_path%>
       </div>
       <div class="header__right">
           <%= link_to "ログイン", new_shop_session_path, class: "header__top--btn" %>
           <%= link_to "ログアウト", destroy_shop_session_path, method: :delete, class: "header__top--btn" %>
-      
       </div>
+      <div class="mypage">
+          <%= link_to "マイページ", shop_path(current_shop)%>
+
     </header>
     <div class="contents">
       <%= yield %>

@@ -4,7 +4,7 @@
   justify-content: center;
   height :5vh;
   line-height: 5vh;
-  margin-top:5vh;
+  margin-top:3vh;
   .top-contents__shopName__defaultname{
     border: 1px solid;
     background-color: white;
@@ -84,4 +84,36 @@
     background-color: white;
     border: 1px solid;
   }
+}
+
+.couponBtn {
+  display: block;
+  width: 130px;
+  position: relative;
+  padding: 0.35em 0.7em 0.2em;
+  background: #668ad8;
+  color: #F0F0F0;
+  text-decoration: none;
+  margin:1vh auto;
+}
+.couponBtn:before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  height: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  top: 100%;
+   top: calc(100% - 2px);
+  left: 0;
+  background: linear-gradient(-135deg, #668ad8 4px, transparent 0) 0 4px,
+              linear-gradient(135deg, #668ad8 4px, #f0f0f0 0) 0 4px;
+  background-color: #668ad8;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 10px 10px;
+  transition: .2s;
+}
+.couponBtn:hover:before {
+  background-size: 13px 10px;
 }
