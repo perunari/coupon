@@ -22,16 +22,21 @@
     <div class="top-contents__shopUrl__url">
       <p class= "shop"><%= @shop.text %></p>
     </div>
+    
   </div>
-  <a href=/salecoupons/new class="couponBtn">
-  クーポンを発行する
-  </a>
+    <a href= / class="shopUpdate">
+    編集
+    </a>
+  
+
 </div>
 
 <div class="border">
 </div>
+<a href=/salecoupons/new class="couponBtn">
+  クーポンを発行する
+  </a>
 <div class="bottom-contents">
-<p class="couponindex"><%= @shop.shop %>のクーポン一覧</p>
 <% @salecoupons.each do |salecoupon| %>
 <% if shop_signed_in? && current_shop.id == salecoupon.shop_id %>
 
