@@ -34,7 +34,7 @@
 <div class="border">
 </div>
 <a href=/salecoupons/new class="couponBtn">
-  クーポンを発行する
+  クーポン発行
   </a>
 <div class="bottom-contents">
 <% @salecoupons.each do |salecoupon| %>
@@ -64,19 +64,21 @@
       </div>
     </div>
     <div class="setting">  
-      <p>
+      <button type="button" class="btn btn-primary">
           <%= link_to '編集', "/salecoupons/#{salecoupon.id}/edit", method: :get %>
-      </p>
-      <p>
+      </button>
+      <button type="button" class="btn btn-danger">
         <%= link_to '削除', "/salecoupons/#{salecoupon.id}", method: :delete %>
-      </p>
+      </button>
     </div>
      
-
    
     </div>
-
 <% end %>
 <% end %>
 
+  <nav class="pageNation">
+    <%= paginate @salecoupons,  theme: 'twitter-bootstrap-4' %>
+    
+  <nav>
 </div>

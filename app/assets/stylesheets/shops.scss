@@ -77,7 +77,7 @@
 
 .post-contents{
   margin: 20px auto;
-  width: 50%;
+  width: 60%;
   height:11vh;
   display: flex;
   .posts{
@@ -88,13 +88,14 @@
 
 .couponBtn {
   display: block;
-  width: 130px;
+  width: 110px;
   position: relative;
   padding: 0.35em 0.7em 0.2em;
   background: #668ad8;
   color: #F0F0F0;
   text-decoration: none;
   margin:1vh auto;
+  text-align: center;
 }
 .couponBtn:before {
   content: '';
@@ -116,4 +117,12 @@
 }
 .couponBtn:hover:before {
   background-size: 13px 10px;
+}
+
+nav{
+  margin:0 20vh;
+}
+.pagination {
+  text-align: center;
+  margin: 0 auto;
 }
