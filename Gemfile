@@ -63,10 +63,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'pry-rails'
-gem 'bootstrap', '~> 4.1.1'
-gem 'jquery-rails'
-gem 'kaminari'
-gem 'bootstrap4-kaminari-views'
 
 group :production do
   gem 'pg'
